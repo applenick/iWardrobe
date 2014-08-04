@@ -12,8 +12,9 @@ import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 
 @MenuInventory(
-		slots = 9,
-		name = "§bWardrobe")
+		slots = 27,
+		name = "§b§nWardrobe",
+		filler = @ItemStackAnnotation(name = "", material = Material.WOOD))
 @NestedMenu(
 	    {
 	        HatMenu.class,
@@ -30,7 +31,8 @@ public class WardrobeMenu extends Menu {
 			slot = 0,
 			item = @ItemStackAnnotation(
 					material = Material.DIAMOND_HELMET,
-					name = "§aHats"
+					name = "§aHats",
+					lore = "§6§lSelect your Hat"
 					)
 			)
 	public void openHatMenu(WardrobePlayer player){
