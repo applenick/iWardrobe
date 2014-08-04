@@ -1,5 +1,8 @@
 package com.applenick.iWardrobe;
 
+import net.njay.MenuFramework;
+import net.njay.MenuRegistry;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -7,6 +10,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.applenick.iWardrobe.commands.WardrobeCommands;
+import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.sk89q.bukkit.util.CommandsManagerRegistration;
 import com.sk89q.minecraft.util.commands.CommandException;
 import com.sk89q.minecraft.util.commands.CommandPermissionsException;
@@ -25,14 +29,17 @@ public class iWardrobe extends JavaPlugin {
 	public void onEnable(){
 		wardrobe = this;
 
+		setupMenuGUI();
 		setupCommands();
 	}
 
 	public void onDisable(){
 
 	}
-
-
+	
+	private void setupMenuGUI(){
+		MenuFramework.enable(new MenuRegistry(wardrobe, WardrobeMenu.class), new WardrobePlayerManager());
+	}
 
 	private CommandsManager<CommandSender> commands;
 
