@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.applenick</groupId>
-  <artifactId>iWardrobe</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  
-  <repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.applenick</groupId>
+	<artifactId>iWardrobe</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<repositories>
 		<repository>
 			<id>spigot-repo</id>
 			<url>http://repo.md-5.net/content/groups/public/</url>
@@ -12,6 +13,10 @@
 		<repository>
 			<id>overcast-repo</id>
 			<url>https://repo.oc.tc/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>njay-repo</id>
+			<url>http://repo.njay.net/content/groups/public</url>
 		</repository>
 	</repositories>
 
@@ -32,6 +37,12 @@
 			<artifactId>command-framework-bukkit</artifactId>
 			<version>0.5-SNAPSHOT</version>
 		</dependency>
+		<!-- custom menu framework, available here: https://github.com/gcflames5/menu-framework -->
+		<dependency>
+			<groupId>net.njay</groupId>
+			<artifactId>menu-framework</artifactId>
+			<version>1.0.9</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -44,7 +55,7 @@
 			</resource>
 		</resources>
 		<plugins>
-		<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>1.4</version>
@@ -58,6 +69,7 @@
 							<artifactSet>
 								<includes>
 									<include>com.sk89q:command-framework-bukkit</include>
+									<include>net.njay:menu-framework</include>
 								</includes>
 							</artifactSet>
 						</configuration>
