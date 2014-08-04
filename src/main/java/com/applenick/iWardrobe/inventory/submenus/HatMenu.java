@@ -13,7 +13,8 @@ import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
 
-@MenuInventory(slots = 9 , name = "§a§nHats" , onClose = WardrobeMenu.class , filler = @ItemStackAnnotation(name = "", material = Material.AIR))
+@MenuInventory(slots = 9 ,
+name = "§a§nHats" , onClose = WardrobeMenu.class)
 public class HatMenu extends Menu {
 
 	public HatMenu(MenuManager manager, Inventory inv) {
@@ -111,7 +112,7 @@ public class HatMenu extends Menu {
 		player.getBukkit().closeInventory();
 	}
 	
-	@MenuItem(slot = 9 , 
+	@MenuItem(slot = 8 , 
 			item = @ItemStackAnnotation(
 					material = Material.TRAP_DOOR ,
 					name = "§4Return" ,
