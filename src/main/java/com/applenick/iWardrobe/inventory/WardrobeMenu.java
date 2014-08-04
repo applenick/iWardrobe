@@ -1,5 +1,6 @@
 package com.applenick.iWardrobe.inventory;
 
-public class InventoryManager {
+
+public class WardrobeMenu {
 
 }
