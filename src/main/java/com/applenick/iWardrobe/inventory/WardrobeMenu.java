@@ -12,9 +12,9 @@ import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 
 @MenuInventory(
-		slots = 27,
+		slots = 18,
 		name = "§b§nWardrobe",
-		filler = @ItemStackAnnotation(name = "", material = Material.WOOD))
+		filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE))
 @NestedMenu(
 	    {
 	        HatMenu.class,

@@ -13,7 +13,7 @@ import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
 
-@MenuInventory(slots = 9 , name = "§a§nHats" , onClose = WardrobeMenu.class)
+@MenuInventory(slots = 9 , name = "§a§nHats" , onClose = WardrobeMenu.class , filler = @ItemStackAnnotation(name = "", material = Material.AIR))
 public class HatMenu extends Menu {
 
 	public HatMenu(MenuManager manager, Inventory inv) {
@@ -75,6 +75,49 @@ public class HatMenu extends Menu {
 			)
 	public void leatherHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.LEATHER_HELMET));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 5 , 
+			item = @ItemStackAnnotation(
+					material = Material.GLASS ,
+					name = "§5Space Travel Helmet" ,
+					lore = "§aTime for space fun!")
+			)
+	public void spaceHelmet(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.GLASS));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 6 , 
+			item = @ItemStackAnnotation(
+					material = Material.TNT ,
+					name = "§cKaboom Hat" ,
+					lore = "§6Time for TNT fun!")
+			)
+	public void tntHelmet(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.GLASS));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 7 , 
+			item = @ItemStackAnnotation(
+					material = Material.CAKE_BLOCK ,
+					name = "§dCake Hat" ,
+					lore = "§5Time for some Yummy fun!")
+			)
+	public void cakeHelmet(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.CAKE_BLOCK));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 9 , 
+			item = @ItemStackAnnotation(
+					material = Material.TRAP_DOOR ,
+					name = "§4Return" ,
+					lore = "§cReturn to wardrobe menu")
+			)
+	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
 	}
 }
