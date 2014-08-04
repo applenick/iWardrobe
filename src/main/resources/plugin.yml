@@ -1,0 +1,4 @@
+name: iWardrobe
+main: com.applenick.iWardrobe.iWardrobe
+version: ${project.version}-${git.commit.id.abbrev}
+author: AppleNick
