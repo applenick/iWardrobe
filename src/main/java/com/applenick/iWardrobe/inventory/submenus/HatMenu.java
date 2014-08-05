@@ -44,17 +44,6 @@ public class HatMenu extends Menu {
 		player.setActiveMenu(new ArmorHelmets(manager, null));
 	}
 	
-	
-	@MenuItem(slot = 4 , 
-			item = @ItemStackAnnotation(
-					material = Material.AIR ,
-					name = "" ,
-					lore = "")
-			)
-	public void blankSlot(WardrobePlayer player){
-	}
-	
-	
 	@MenuItem(slot = 5 , 
 			item = @ItemStackAnnotation(
 					material = Material.TNT ,
