@@ -32,7 +32,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Top of the line")
 			)
 	public void diamondBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.DIAMOND_BOOTS));
+		player.getBukkit().getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
 		player.getBukkit().closeInventory();
 	}
 
@@ -43,7 +43,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the stylish one")
 			)
 	public void goldenBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.GOLD_BOOTS));
+		player.getBukkit().getInventory().setBoots(new ItemStack(Material.GOLD_BOOTS));
 		player.getBukkit().closeInventory();
 	}
 
@@ -54,7 +54,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Strong yet simple")
 			)
 	public void ironBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_BOOTS));
+		player.getBukkit().getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
 		player.getBukkit().closeInventory();
 	}
 
@@ -65,7 +65,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Hidden beauty")
 			)
 	public void chainmailBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_BOOTS));
+		player.getBukkit().getInventory().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
 		player.getBukkit().closeInventory();
 	}
 
@@ -76,7 +76,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_BOOTS));
+		player.getBukkit().getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
 		player.getBukkit().closeInventory();
 	}
 
