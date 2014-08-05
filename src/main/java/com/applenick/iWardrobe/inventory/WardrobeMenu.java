@@ -41,7 +41,7 @@ public class WardrobeMenu extends Menu {
 	
 	
 	@MenuItem(
-			slot = 1,
+			slot = 4,
 			item = @ItemStackAnnotation(
 					material = Material.DIAMOND_HELMET,
 					name = "§aHats",
@@ -53,7 +53,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 10,
+			slot = 13,
 			item = @ItemStackAnnotation(
 					material = Material.IRON_CHESTPLATE,
 					name = "§3Chestplates",
@@ -65,7 +65,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 19,
+			slot = 22,
 			item = @ItemStackAnnotation(
 					material = Material.CHAINMAIL_LEGGINGS,
 					name = "§cPants",
@@ -77,7 +77,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 28,
+			slot = 31,
 			item = @ItemStackAnnotation(
 					material = Material.GOLD_BOOTS,
 					name = "§eBoots",
