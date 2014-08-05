@@ -13,72 +13,74 @@ import net.njay.annotation.MenuItem;
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
-@MenuInventory(slots = 9 ,
-			   name = "§b§nChestplate" ,
-			   onClose = WardrobeMenu.class
-			   )
-public class ChestPlateMenu extends Menu {
 
-	public ChestPlateMenu(MenuManager manager, Inventory inv) {
+@MenuInventory(slots = 9 ,
+				name = "§b§nPants",
+				filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
+				onClose = WardrobeMenu.class
+			  )
+public class PantsMenu extends Menu {
+
+	public PantsMenu(MenuManager manager, Inventory inv) {
 		super(manager, inv);
 	}
-	
+
 	@MenuItem(slot = 0 , 
 			item = @ItemStackAnnotation(
-					material = Material.DIAMOND_CHESTPLATE ,
-					name = "§bDiamond §aChestplate" ,
-					lore = "§6Top of the Line")
+					material = Material.DIAMOND_LEGGINGS ,
+					name = "§bDiamond §aPants" ,
+					lore = "§6Top of the line")
 			)
-	public void diamondChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
+	public void diamondLegs(WardrobePlayer player){
+		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.DIAMOND_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
-	
+
 	@MenuItem(slot = 1 , 
 			item = @ItemStackAnnotation(
-					material = Material.GOLD_CHESTPLATE ,
-					name = "§eGolden §aChestplate" ,
-					lore = "§6For the stylish ones")
+					material = Material.GOLD_LEGGINGS ,
+					name = "§eDiamond §aPants" ,
+					lore = "§6For the stylish one")
 			)
-	public void goldenChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.GOLD_CHESTPLATE));
+	public void goldenLegs(WardrobePlayer player){
+		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.GOLD_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
-	
+
 	@MenuItem(slot = 2 , 
 			item = @ItemStackAnnotation(
-					material = Material.IRON_CHESTPLATE ,
-					name = "§7Iron §aChestplate" ,
+					material = Material.IRON_LEGGINGS ,
+					name = "§7Iron §aPants" ,
 					lore = "§6Strong yet simple")
 			)
 	public void ironChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
+		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
-	
+
 	@MenuItem(slot = 3 , 
 			item = @ItemStackAnnotation(
-					material = Material.CHAINMAIL_CHESTPLATE ,
-					name = "§cChainmail §aChestplate" ,
-					lore = "§6A hidden beauty")
+					material = Material.CHAINMAIL_LEGGINGS ,
+					name = "§cChainmail §aPants" ,
+					lore = "§6Hidden beauty")
 			)
 	public void chainmailChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
+		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
-	
+
 	@MenuItem(slot = 4 , 
 			item = @ItemStackAnnotation(
-					material = Material.LEATHER_CHESTPLATE ,
-					name = "§dLeather §aChestplate" ,
+					material = Material.LEATHER_LEGGINGS ,
+					name = "§dLeather §aPants" ,
 					lore = "§6For the average ones")
 			)
 	public void leatherChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
+		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
-	
-	
+
+
 	@MenuItem(slot = 8 , 
 			item = @ItemStackAnnotation(
 					material = Material.TRAP_DOOR ,
