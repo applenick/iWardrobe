@@ -8,16 +8,18 @@ import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 
 import com.applenick.iWardrobe.WardrobePlayer;
+import com.applenick.iWardrobe.inventory.submenus.ChestPlateMenu;
 import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 
 @MenuInventory(
 		slots = 18,
-		name = "§b§nWardrobe",
+		name = "§4§l§nWardrobe",
 		filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE))
 @NestedMenu(
 	    {
 	        HatMenu.class,
+	        ChestPlateMenu.class
 	    }
 )
 public class WardrobeMenu extends Menu {
@@ -37,6 +39,20 @@ public class WardrobeMenu extends Menu {
 			)
 	public void openHatMenu(WardrobePlayer player){
 		player.setActiveMenu(new HatMenu(manager , null));
+	}
+	
+	
+	
+	@MenuItem(
+			slot = 1,
+			item = @ItemStackAnnotation(
+					material = Material.IRON_CHESTPLATE,
+					name = "§9Chestplates",
+					lore = "§6§lSelect your Chestplate"
+					)
+			)
+	public void openChestPlateMenu(WardrobePlayer player){
+		player.setActiveMenu(new ChestPlateMenu(manager , null));
 	}
 
 	

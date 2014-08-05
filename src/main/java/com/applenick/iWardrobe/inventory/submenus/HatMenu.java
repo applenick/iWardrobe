@@ -14,7 +14,7 @@ import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
 
 @MenuInventory(slots = 9 ,
-name = "§a§nHats" , onClose = WardrobeMenu.class)
+name = "§b§nHats" , onClose = WardrobeMenu.class)
 public class HatMenu extends Menu {
 
 	public HatMenu(MenuManager manager, Inventory inv) {
