@@ -53,7 +53,7 @@ public class PantsMenu extends Menu {
 					name = "§7Iron §aPants" ,
 					lore = "§6Strong yet simple")
 			)
-	public void ironChestPlate(WardrobePlayer player){
+	public void ironLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
@@ -64,7 +64,7 @@ public class PantsMenu extends Menu {
 					name = "§cChainmail §aPants" ,
 					lore = "§6Hidden beauty")
 			)
-	public void chainmailChestPlate(WardrobePlayer player){
+	public void chainmailLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}
@@ -75,7 +75,7 @@ public class PantsMenu extends Menu {
 					name = "§dLeather §aPants" ,
 					lore = "§6For the average ones")
 			)
-	public void leatherChestPlate(WardrobePlayer player){
+	public void leatherLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_LEGGINGS));
 		player.getBukkit().closeInventory();
 	}

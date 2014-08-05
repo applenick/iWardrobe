@@ -73,9 +73,9 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 1,
+			slot = 3,
 			item = @ItemStackAnnotation(
-					material = Material.LEATHER_BOOTS,
+					material = Material.GOLD_BOOTS,
 					name = "§eBoots",
 					lore = "§6Select your §eBoots"
 					)

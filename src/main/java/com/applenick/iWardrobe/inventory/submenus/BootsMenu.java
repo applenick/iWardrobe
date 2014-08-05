@@ -31,7 +31,7 @@ public class BootsMenu extends Menu {
 					name = "§bDiamond §aBoots" ,
 					lore = "§6Top of the line")
 			)
-	public void diamondLegs(WardrobePlayer player){
+	public void diamondBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.DIAMOND_BOOTS));
 		player.getBukkit().closeInventory();
 	}
@@ -42,7 +42,7 @@ public class BootsMenu extends Menu {
 					name = "§eGolden §aBoots" ,
 					lore = "§6For the stylish one")
 			)
-	public void goldenLegs(WardrobePlayer player){
+	public void goldenBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.GOLD_BOOTS));
 		player.getBukkit().closeInventory();
 	}
@@ -53,7 +53,7 @@ public class BootsMenu extends Menu {
 					name = "§7Iron §aBoots" ,
 					lore = "§6Strong yet simple")
 			)
-	public void ironChestPlate(WardrobePlayer player){
+	public void ironBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_BOOTS));
 		player.getBukkit().closeInventory();
 	}
@@ -64,7 +64,7 @@ public class BootsMenu extends Menu {
 					name = "§cChainmail §aBoots" ,
 					lore = "§6Hidden beauty")
 			)
-	public void chainmailChestPlate(WardrobePlayer player){
+	public void chainmailBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_BOOTS));
 		player.getBukkit().closeInventory();
 	}
@@ -75,7 +75,7 @@ public class BootsMenu extends Menu {
 					name = "§dLeather §aBoots" ,
 					lore = "§6For the average ones")
 			)
-	public void leatherChestPlate(WardrobePlayer player){
+	public void leatherBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_BOOTS));
 		player.getBukkit().closeInventory();
 	}
