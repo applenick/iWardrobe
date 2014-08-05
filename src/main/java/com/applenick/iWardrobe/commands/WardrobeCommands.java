@@ -12,7 +12,6 @@ import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.utils.CommandUtil;
 import com.sk89q.minecraft.util.commands.Command;
 import com.sk89q.minecraft.util.commands.CommandContext;
-import com.sk89q.minecraft.util.commands.CommandPermissions;
 
 public class WardrobeCommands {
 
@@ -21,7 +20,6 @@ public class WardrobeCommands {
 			aliases = { "wardrobe", "wd" },
 			desc = "Opens your Wardrobe"
 			)
-	@CommandPermissions("wardrobe.use")
 	public static void punish(final CommandContext args, final CommandSender sender) throws CommandException {
 		if(!(sender instanceof Player)){
 			sender.sendMessage(ChatColor.RED + "Only players may use this command!");
