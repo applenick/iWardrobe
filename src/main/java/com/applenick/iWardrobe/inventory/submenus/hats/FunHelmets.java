@@ -27,12 +27,12 @@ public class FunHelmets extends Menu {
 
 	@MenuItem(slot = 0 , 
 			item = @ItemStackAnnotation(
-					material = Material.DIAMOND_HELMET ,
-					name = "§bDiamond Helmet" ,
-					lore = "§6Top of the Line")
+					material = Material.TNT ,
+					name = "§cTNT" ,
+					lore = "§6Super Fun")
 			)
 	public void diamondHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.TNT));
 		player.getBukkit().closeInventory();
 	}
 
