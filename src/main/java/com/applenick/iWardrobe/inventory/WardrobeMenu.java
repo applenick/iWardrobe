@@ -20,7 +20,7 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 
 
 @MenuInventory(
-		slots = 18,
+		slots = 45,
 		name = "§5§lWardrobe"
 		)
 @NestedMenu(
@@ -41,7 +41,7 @@ public class WardrobeMenu extends Menu {
 	
 	
 	@MenuItem(
-			slot = 0,
+			slot = 1,
 			item = @ItemStackAnnotation(
 					material = Material.DIAMOND_HELMET,
 					name = "§aHats",
@@ -53,7 +53,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 1,
+			slot = 10,
 			item = @ItemStackAnnotation(
 					material = Material.IRON_CHESTPLATE,
 					name = "§3Chestplates",
@@ -65,7 +65,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 2,
+			slot = 19,
 			item = @ItemStackAnnotation(
 					material = Material.CHAINMAIL_LEGGINGS,
 					name = "§cPants",
@@ -77,7 +77,7 @@ public class WardrobeMenu extends Menu {
 	}
 	
 	@MenuItem(
-			slot = 3,
+			slot = 28,
 			item = @ItemStackAnnotation(
 					material = Material.GOLD_BOOTS,
 					name = "§eBoots",
