@@ -15,28 +15,27 @@ import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 @MenuInventory(slots = 36 ,
 name = "§dFun Helmets" ,
-filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
 onClose = HatMenu.class)
 public class FunHelmets extends Menu {
 
 	public FunHelmets(MenuManager manager, Inventory inv) {
 		super(manager, inv);
 	}
-	
-	
+
+
 
 	@MenuItem(slot = 0 , 
 			item = @ItemStackAnnotation(
 					material = Material.TNT ,
 					name = "§cTNT" ,
 					lore = "§6Super Fun")
-			)
+			 )
 	public void diamondHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.TNT));
 		player.getBukkit().closeInventory();
 	}
 
-	
-	
-	
+
+
+
 }

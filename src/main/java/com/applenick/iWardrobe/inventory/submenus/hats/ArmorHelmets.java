@@ -15,9 +15,9 @@ import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 
 @MenuInventory(slots = 9 ,
-name = "§bArmor Helmets" ,
-filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
-onClose = HatMenu.class)
+				name = "§bArmor Helmets" ,
+				onClose = HatMenu.class
+				)
 public class ArmorHelmets extends Menu {
 
 	public ArmorHelmets(MenuManager manager, Inventory inv) {

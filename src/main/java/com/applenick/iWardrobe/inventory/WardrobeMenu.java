@@ -21,14 +21,16 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 
 @MenuInventory(
 		slots = 18,
-		name = "§5§lWardrobe",
-		filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE))
+		name = "§5§lWardrobe"
+		)
 @NestedMenu(
 	    {
 	        HatMenu.class,
 	        ChestPlateMenu.class,
 	        PantsMenu.class,
 	        BootsMenu.class,
+	        ArmorHelmets.class,
+	        FunHelmets.class
 	    }
 )
 public class WardrobeMenu extends Menu {
@@ -85,8 +87,4 @@ public class WardrobeMenu extends Menu {
 	public void openBoots(WardrobePlayer player){
 		player.setActiveMenu(new BootsMenu(manager , null));
 	}
-
-	
-	
-
 }

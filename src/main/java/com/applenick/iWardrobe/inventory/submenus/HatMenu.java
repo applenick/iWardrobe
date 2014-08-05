@@ -19,7 +19,6 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 
 @MenuInventory(slots = 9 ,
 	name = "§bHats" ,
-	filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
 	onClose = WardrobeMenu.class)
 @NestedMenu(
 		{
@@ -27,8 +26,7 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 			FunHelmets.class
 		}
 		
-		)
-
+			)
 public class HatMenu extends Menu {
 
 	public HatMenu(MenuManager manager, Inventory inv) {
@@ -67,8 +65,6 @@ public class HatMenu extends Menu {
 		player.setActiveMenu(new FunHelmets(manager, null));
 	}
 
-
-	
 
 	@MenuItem(slot = 8 , 
 			item = @ItemStackAnnotation(

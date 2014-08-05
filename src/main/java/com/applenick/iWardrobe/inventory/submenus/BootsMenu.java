@@ -16,7 +16,6 @@ import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
 @MenuInventory(slots = 9 ,
 				name = "§b§nBoots",
-				filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
 				onClose = WardrobeMenu.class
 			  )
 public class BootsMenu extends Menu {
