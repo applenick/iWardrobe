@@ -1,4 +1,4 @@
-package com.applenick.iWardrobe.inventory.submenus;
+package com.applenick.iWardrobe.inventory.submenus.hats;
 
 import net.njay.Menu;
 import net.njay.MenuManager;
@@ -11,16 +11,16 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
-import com.applenick.iWardrobe.inventory.WardrobeMenu;
+import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 
 
 @MenuInventory(slots = 9 ,
-	name = "§bHats" ,
-	filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
-	onClose = WardrobeMenu.class)
-public class HatMenu extends Menu {
+name = "§bArmor Helmets" ,
+filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
+onClose = HatMenu.class)
+public class ArmorHelmets extends Menu {
 
-	public HatMenu(MenuManager manager, Inventory inv) {
+	public ArmorHelmets(MenuManager manager, Inventory inv) {
 		super(manager, inv);
 	}
 
@@ -82,38 +82,6 @@ public class HatMenu extends Menu {
 		player.getBukkit().closeInventory();
 	}
 
-	@MenuItem(slot = 5 , 
-			item = @ItemStackAnnotation(
-					material = Material.GLASS ,
-					name = "§5Space Travel Helmet" ,
-					lore = "§6To infinity and beyond")
-			)
-	public void spaceHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.GLASS));
-		player.getBukkit().closeInventory();
-	}
-
-	@MenuItem(slot = 6 , 
-			item = @ItemStackAnnotation(
-					material = Material.TNT ,
-					name = "§cTNT Hat" ,
-					lore = "§6Want a little kaboom?")
-			)
-	public void tntHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.GLASS));
-		player.getBukkit().closeInventory();
-	}
-
-	@MenuItem(slot = 7 , 
-			item = @ItemStackAnnotation(
-					material = Material.CAKE_BLOCK ,
-					name = "§dCake Hat" ,
-					lore = "§6A hat for the hungry")
-			)
-	public void cakeHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.CAKE_BLOCK));
-		player.getBukkit().closeInventory();
-	}
 
 	@MenuItem(slot = 8 , 
 			item = @ItemStackAnnotation(
@@ -124,4 +92,5 @@ public class HatMenu extends Menu {
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
 	}
+
 }

@@ -15,6 +15,8 @@ import com.applenick.iWardrobe.inventory.submenus.BootsMenu;
 import com.applenick.iWardrobe.inventory.submenus.ChestPlateMenu;
 import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 import com.applenick.iWardrobe.inventory.submenus.PantsMenu;
+import com.applenick.iWardrobe.inventory.submenus.hats.ArmorHelmets;
+import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 
 
 @MenuInventory(
@@ -26,7 +28,9 @@ import com.applenick.iWardrobe.inventory.submenus.PantsMenu;
 	        HatMenu.class,
 	        ChestPlateMenu.class,
 	        PantsMenu.class,
-	        BootsMenu.class
+	        BootsMenu.class,
+	        ArmorHelmets.class,
+	        FunHelmets.class
 	    }
 )
 public class WardrobeMenu extends Menu {
