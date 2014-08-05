@@ -7,10 +7,13 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.applenick.iWardrobe.commands.WardrobeCommands;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
+import com.applenick.iWardrobe.listeners.PlayerLogins;
 import com.sk89q.bukkit.util.CommandsManagerRegistration;
 import com.sk89q.minecraft.util.commands.CommandException;
 import com.sk89q.minecraft.util.commands.CommandPermissionsException;
@@ -31,10 +34,17 @@ public class iWardrobe extends JavaPlugin {
 
 		setupMenuGUI();
 		setupCommands();
+		
+		this.registerListener(new PlayerLogins());
 	}
 
 	public void onDisable(){
 
+	}
+	
+	private void registerListener(Listener listener){
+		PluginManager PM = this.getServer().getPluginManager();
+		PM.registerEvents(listener, this);
 	}
 	
 	private void setupMenuGUI(){
