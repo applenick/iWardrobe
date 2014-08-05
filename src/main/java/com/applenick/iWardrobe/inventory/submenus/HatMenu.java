@@ -5,6 +5,7 @@ import net.njay.MenuManager;
 import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
+import net.njay.annotation.NestedMenu;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -20,6 +21,13 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 	name = "§bHats" ,
 	filler = @ItemStackAnnotation(name = "", material = Material.STAINED_GLASS_PANE),
 	onClose = WardrobeMenu.class)
+@NestedMenu(
+		{
+			ArmorHelmets.class,
+			FunHelmets.class
+		}
+		
+		)
 
 public class HatMenu extends Menu {
 
@@ -53,7 +61,7 @@ public class HatMenu extends Menu {
 			item = @ItemStackAnnotation(
 					material = Material.TNT ,
 					name = "§aFun Hats" ,
-					lore = "§6Something new and fun!")
+					lore = "§6Blocks N Stuff")
 			)
 	public void openBlockHats(WardrobePlayer player){
 		player.setActiveMenu(new FunHelmets(manager, null));

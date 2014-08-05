@@ -29,8 +29,6 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 	        ChestPlateMenu.class,
 	        PantsMenu.class,
 	        BootsMenu.class,
-	        ArmorHelmets.class,
-	        FunHelmets.class
 	    }
 )
 public class WardrobeMenu extends Menu {
