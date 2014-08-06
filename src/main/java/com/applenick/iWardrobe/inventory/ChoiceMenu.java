@@ -12,6 +12,7 @@ import net.njay.annotation.MenuItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
@@ -54,20 +55,26 @@ public class ChoiceMenu extends Menu {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 		
+		
+		
 		if(p.getInventory().getHelmet().getItemMeta().getLore() == lore){
-			p.getInventory().getHelmet().setAmount(0);
+			ItemStack hat = p.getInventory().getHelmet();
+			p.getInventory().removeItem(hat);
 		}
 		
 		if(p.getInventory().getChestplate().getItemMeta().getLore() == lore){
-			p.getInventory().getChestplate().setAmount(0);
+			ItemStack chestplate = p.getInventory().getChestplate();
+			p.getInventory().removeItem(chestplate);
 		}
 		
 		if(p.getInventory().getLeggings().getItemMeta().getLore() == lore){
-			p.getInventory().getLeggings().setAmount(0);
+			ItemStack leggings = p.getInventory().getLeggings();
+			p.getInventory().removeItem(leggings);
 		}
 		
 		if(p.getInventory().getBoots().getItemMeta().getLore() == lore){
-			p.getInventory().getBoots().setAmount(0);
+			ItemStack boots = p.getInventory().getBoots();
+			p.getInventory().removeItem(boots);
 		}
 		
 		p.closeInventory();
