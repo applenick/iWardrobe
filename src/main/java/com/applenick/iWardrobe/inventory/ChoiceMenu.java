@@ -1,5 +1,8 @@
 package com.applenick.iWardrobe.inventory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.njay.Menu;
 import net.njay.MenuManager;
 import net.njay.annotation.ItemStackAnnotation;
@@ -9,7 +12,6 @@ import net.njay.annotation.MenuItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
@@ -34,7 +36,6 @@ public class ChoiceMenu extends Menu {
 			)
 	public void deleteWardrobe(WardrobePlayer player){
 		deleteInventory(player);
-		player.getBukkit().closeInventory();
 	}
 	
 	@MenuItem(slot = 5 , 
@@ -50,12 +51,27 @@ public class ChoiceMenu extends Menu {
 	private void deleteInventory(WardrobePlayer player){
 		Player p = player.getBukkit();
 		
+		List<String> lore = new ArrayList<String>();
+		lore.add(iWardrobe.wardrobe_lore);
 		
-		for(ItemStack i : p.getInventory().getArmorContents()){
-			if(i.getItemMeta().getLore().iterator().toString().equalsIgnoreCase(iWardrobe.wardrobe_lore)){
-				p.getInventory().remove(i);;
-			}
+		if(p.getInventory().getHelmet().getItemMeta().getLore() == lore){
+			p.getInventory().getHelmet().setAmount(0);
 		}
+		
+		if(p.getInventory().getChestplate().getItemMeta().getLore() == lore){
+			p.getInventory().getChestplate().setAmount(0);
+		}
+		
+		if(p.getInventory().getLeggings().getItemMeta().getLore() == lore){
+			p.getInventory().getLeggings().setAmount(0);
+		}
+		
+		if(p.getInventory().getBoots().getItemMeta().getLore() == lore){
+			p.getInventory().getBoots().setAmount(0);
+		}
+		
+		p.closeInventory();
+				
 	}
 	
 	
