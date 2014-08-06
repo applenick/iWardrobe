@@ -92,7 +92,7 @@ public class WardrobeMenu extends Menu {
 	
 	
 	@MenuItem(
-			slot = 7,
+			slot = 6,
 			item = @ItemStackAnnotation(
 					material = Material.LAVA_BUCKET,
 					name = "§cReset Your Outfit",
