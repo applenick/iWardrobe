@@ -102,10 +102,5 @@ public class WardrobeMenu extends Menu {
 	public void resetWardrobe(WardrobePlayer player){
 		player.setActiveMenu(new ChoiceMenu(manager , null));
 	}
-	
-	
-	
-	
-	
-	
+		
 }

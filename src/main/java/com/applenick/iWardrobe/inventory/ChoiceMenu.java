@@ -55,30 +55,28 @@ public class ChoiceMenu extends Menu {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 
-
-
-		if(p.getInventory().getHelmet().getItemMeta().getLore() == lore){
+		if(p.getInventory().getHelmet().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
 			ItemStack hat = p.getInventory().getHelmet();
 			p.getInventory().removeItem(hat);
-		}else{}
+		}
 
-		if(p.getInventory().getChestplate().getItemMeta().getLore() == lore){
+		if(p.getInventory().getChestplate().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
 			ItemStack chestplate = p.getInventory().getChestplate();
 			p.getInventory().removeItem(chestplate);
-		} else {}
+		} 
 
-		if(p.getInventory().getLeggings().getItemMeta().getLore() == lore){
+		if(p.getInventory().getLeggings().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
 			ItemStack leggings = p.getInventory().getLeggings();
 			p.getInventory().removeItem(leggings);
-		} else {}
+		} 
 
-		if(p.getInventory().getBoots().getItemMeta().getLore() == lore){
+		if(p.getInventory().getBoots().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
 			ItemStack boots = p.getInventory().getBoots();
 			p.getInventory().removeItem(boots);
-		} else {}
+		}
 
 		p.closeInventory();
-
+		
 	}
 
 
