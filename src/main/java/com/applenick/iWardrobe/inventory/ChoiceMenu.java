@@ -48,37 +48,35 @@ public class ChoiceMenu extends Menu {
 		player.getBukkit().closeInventory();
 	}
 
-
 	private void deleteInventory(WardrobePlayer player){
 		Player p = player.getBukkit();
-
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 
-		if(p.getInventory().getHelmet().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
+		if(p.getInventory().getHelmet() != null){
 			ItemStack hat = p.getInventory().getHelmet();
-			p.getInventory().removeItem(hat);
+			if(hat.getItemMeta().hasLore() && hat.getItemMeta().getLore() == lore){
+				p.getInventory().removeItem(hat);
+			}
 		}
-
-		if(p.getInventory().getChestplate().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
+		if(p.getInventory().getChestplate() != null){
 			ItemStack chestplate = p.getInventory().getChestplate();
-			p.getInventory().removeItem(chestplate);
+			if(chestplate.hasItemMeta() && chestplate.getItemMeta().getLore() == lore){
+				p.getInventory().removeItem(chestplate);
+			}
 		} 
-
-		if(p.getInventory().getLeggings().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
+		if(p.getInventory().getLeggings() != null){
 			ItemStack leggings = p.getInventory().getLeggings();
-			p.getInventory().removeItem(leggings);
+			if(leggings.hasItemMeta() && leggings.getItemMeta().getLore() == lore){
+				p.getInventory().removeItem(leggings);
+			}
 		} 
-
-		if(p.getInventory().getBoots().getItemMeta().getLore().toString().equalsIgnoreCase(lore.toString())){
+		if(p.getInventory().getBoots() != null){
 			ItemStack boots = p.getInventory().getBoots();
-			p.getInventory().removeItem(boots);
+			if(boots.hasItemMeta() && boots.getItemMeta().getLore() == lore){
+				p.getInventory().removeItem(boots);
+			}
 		}
-
 		p.closeInventory();
-		
 	}
-
-
-
 }
