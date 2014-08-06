@@ -9,9 +9,9 @@ import net.njay.annotation.MenuItem;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
+import com.applenick.iWardrobe.iWardrobe;
 import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 import com.applenick.iWardrobe.utils.ItemUtils;
 
@@ -26,7 +26,7 @@ public class ArmorHelmets extends Menu {
 		super(manager, inv);
 	}
 	
-	private String helmetLore = ChatColor.DARK_RED + "Wardrobe" + ChatColor.AQUA + " Helmet";
+	private String helmetLore = iWardrobe.wardrobe_lore;
 
 
 	@MenuItem(slot = 0 , 

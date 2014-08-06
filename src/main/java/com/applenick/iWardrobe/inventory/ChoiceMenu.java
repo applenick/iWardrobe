@@ -12,6 +12,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
+import com.applenick.iWardrobe.iWardrobe;
 
 
 @MenuInventory(
@@ -33,6 +34,7 @@ public class ChoiceMenu extends Menu {
 			)
 	public void deleteWardrobe(WardrobePlayer player){
 		deleteInventory(player);
+		player.getBukkit().closeInventory();
 	}
 	
 	@MenuItem(slot = 5 , 
@@ -49,11 +51,9 @@ public class ChoiceMenu extends Menu {
 		Player p = player.getBukkit();
 		
 		
-		for(ItemStack i :p.getInventory().getArmorContents()){
-			if(i.getItemMeta().getLore().isEmpty()){
-				return;
-			} else {
-				p.getInventory().remove(i);
+		for(ItemStack i : p.getInventory().getArmorContents()){
+			if(i.getItemMeta().getLore().iterator().toString().equalsIgnoreCase(iWardrobe.wardrobe_lore)){
+				p.getInventory().remove(i);;
 			}
 		}
 	}

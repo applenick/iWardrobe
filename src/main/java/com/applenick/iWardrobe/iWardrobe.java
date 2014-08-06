@@ -24,6 +24,8 @@ import com.sk89q.minecraft.util.commands.WrappedCommandException;
 public class iWardrobe extends JavaPlugin {
 
 	private static iWardrobe wardrobe;
+	
+	public static String wardrobe_lore = ChatColor.WHITE + "[" + ChatColor.DARK_RED + "Wardrobe" + ChatColor.WHITE +"]";
 
 	public static iWardrobe get(){
 		return wardrobe;
