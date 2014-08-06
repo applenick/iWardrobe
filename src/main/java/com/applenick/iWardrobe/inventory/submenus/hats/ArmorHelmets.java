@@ -6,12 +6,14 @@ import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.submenus.HatMenu;
+import com.applenick.iWardrobe.utils.ItemUtils;
 
 
 @MenuInventory(slots = 9 ,
@@ -23,6 +25,8 @@ public class ArmorHelmets extends Menu {
 	public ArmorHelmets(MenuManager manager, Inventory inv) {
 		super(manager, inv);
 	}
+	
+	private String helmetLore = ChatColor.DARK_RED + "Wardrobe" + ChatColor.AQUA + " Helmet";
 
 
 	@MenuItem(slot = 0 , 
@@ -32,7 +36,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6Top of the Line")
 			)
 	public void diamondHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.DIAMOND_HELMET, ChatColor.AQUA + "Diamond Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 	}
 
@@ -44,7 +48,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6For the stylish ones")
 			)
 	public void goldenHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.GOLD_HELMET));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.GOLD_HELMET, ChatColor.YELLOW + "Golden Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 	}
 
@@ -55,7 +59,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6Stong yet simple")
 			)
 	public void ironHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.IRON_HELMET));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.IRON_HELMET, ChatColor.GRAY + "Iron Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 	}
 
@@ -67,7 +71,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6 A hidden beauty")
 			)
 	public void chainHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.CHAINMAIL_HELMET));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHAINMAIL_HELMET, ChatColor.DARK_GRAY + "Chainmail Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 	}
 
@@ -78,7 +82,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(new ItemStack(Material.LEATHER_HELMET));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEATHER_HELMET, ChatColor.GOLD + "Leather Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 	}
 

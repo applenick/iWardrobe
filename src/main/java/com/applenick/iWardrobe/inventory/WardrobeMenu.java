@@ -30,7 +30,8 @@ import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 	        PantsMenu.class,
 	        BootsMenu.class,
 	        ArmorHelmets.class,
-	        FunHelmets.class
+	        FunHelmets.class,
+	        ChoiceMenu.class
 	    }
 )
 public class WardrobeMenu extends Menu {
@@ -48,6 +49,7 @@ public class WardrobeMenu extends Menu {
 					lore = "§6Select your §aHat"
 					)
 			)
+	
 	public void openHatMenu(WardrobePlayer player){
 		player.setActiveMenu(new HatMenu(manager , null));
 	}
@@ -87,4 +89,23 @@ public class WardrobeMenu extends Menu {
 	public void openBoots(WardrobePlayer player){
 		player.setActiveMenu(new BootsMenu(manager , null));
 	}
+	
+	
+	@MenuItem(
+			slot = 7,
+			item = @ItemStackAnnotation(
+					material = Material.LAVA_BUCKET,
+					name = "§cReset Your Outfit",
+					lore = "§6Removes all Wardrobe Items"
+					)
+			)
+	public void resetWardrobe(WardrobePlayer player){
+		player.setActiveMenu(new ChoiceMenu(manager , null));
+	}
+	
+	
+	
+	
+	
+	
 }
