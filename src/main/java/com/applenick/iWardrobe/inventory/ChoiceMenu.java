@@ -56,25 +56,25 @@ public class ChoiceMenu extends Menu {
 		if(p.getInventory().getHelmet() != null){
 			ItemStack hat = p.getInventory().getHelmet();
 			if(hat.getItemMeta().hasLore() && hat.getItemMeta().getLore() == lore){
-				p.getInventory().removeItem(hat);
+				p.getInventory().remove(hat);
 			}
 		}
 		if(p.getInventory().getChestplate() != null){
 			ItemStack chestplate = p.getInventory().getChestplate();
 			if(chestplate.hasItemMeta() && chestplate.getItemMeta().getLore() == lore){
-				p.getInventory().removeItem(chestplate);
+				p.getInventory().remove(chestplate);
 			}
 		} 
 		if(p.getInventory().getLeggings() != null){
 			ItemStack leggings = p.getInventory().getLeggings();
 			if(leggings.hasItemMeta() && leggings.getItemMeta().getLore() == lore){
-				p.getInventory().removeItem(leggings);
+				p.getInventory().remove(leggings);
 			}
 		} 
 		if(p.getInventory().getBoots() != null){
 			ItemStack boots = p.getInventory().getBoots();
 			if(boots.hasItemMeta() && boots.getItemMeta().getLore() == lore){
-				p.getInventory().removeItem(boots);
+				p.getInventory().remove(boots);
 			}
 		}
 		p.closeInventory();
