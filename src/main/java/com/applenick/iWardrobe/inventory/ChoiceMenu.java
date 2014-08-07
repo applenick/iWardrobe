@@ -22,7 +22,7 @@ import com.sk89q.minecraft.util.commands.ChatColor;
 
 @MenuInventory(
 		slots = 9,
-		name = "§4 Are You Sure?"
+		name = "§4Are You Sure?"
 		)
 public class ChoiceMenu extends Menu {
 
@@ -34,7 +34,8 @@ public class ChoiceMenu extends Menu {
 	@MenuItem(slot = 3 , 
 			item = @ItemStackAnnotation(
 					material = Material.DIAMOND_BLOCK ,
-					name = "§bAccept")
+					name = "§bAccept",
+					lore = "§aRemove My Current Wardrobe Selection")
 			)
 	public void deleteWardrobe(WardrobePlayer player){
 		deleteInventory(player);
@@ -43,7 +44,8 @@ public class ChoiceMenu extends Menu {
 	@MenuItem(slot = 5 , 
 			item = @ItemStackAnnotation(
 					material = Material.REDSTONE_BLOCK ,
-					name = "§4Deny")
+					name = "§4Deny",
+					lore = "§cDo not remove, and return to menu.")
 			)
 	public void denyDelete(WardrobePlayer player){
 		player.getBukkit().closeInventory();
@@ -54,32 +56,38 @@ public class ChoiceMenu extends Menu {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 
-		if(p.getInventory().getHelmet() != null){
+		/*if(p.getInventory().getHelmet() != null){
 			ItemStack hat = p.getInventory().getHelmet();
-			if(hat.getItemMeta().hasLore() && hat.getItemMeta().getLore().equals(lore)){
+			if(hat.getItemMeta().getLore().equals(lore)){
 				p.getInventory().remove(hat);
 			}
 		}
 		if(p.getInventory().getChestplate() != null){
 			ItemStack chestplate = p.getInventory().getChestplate();
-			if(chestplate.hasItemMeta() && chestplate.getItemMeta().getLore().equals(lore)){
+			if(chestplate.getItemMeta().getLore().equals(lore)){
 				p.getInventory().remove(chestplate);
 			}
 		} 
 		if(p.getInventory().getLeggings() != null){
 			ItemStack leggings = p.getInventory().getLeggings();
-			if(leggings.hasItemMeta() && leggings.getItemMeta().getLore().equals(lore)){
+			if(leggings.getItemMeta().getLore().equals(lore)){
 				p.getInventory().remove(leggings);
 			}
 		} 
 		if(p.getInventory().getBoots() != null){
 			ItemStack boots = p.getInventory().getBoots();
-			if(boots.hasItemMeta() && boots.getItemMeta().getLore().equals(lore)){
+			if(boots.getItemMeta().getLore().equals(lore)){
 				p.getInventory().remove(boots);
+			}
+		}*/
+		
+		for(ItemStack itemL : p.getInventory().getArmorContents()){
+			if(itemL.getItemMeta().getLore().equals(lore)){
+				p.getInventory().remove(itemL);
 			}
 		}
 		p.closeInventory();
-		p.sendMessage(ChatColor.GREEN + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
+		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
 		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
 	}
 }
