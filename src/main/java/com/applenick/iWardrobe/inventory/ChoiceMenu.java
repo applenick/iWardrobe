@@ -17,6 +17,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
+import com.applenick.iWardrobe.utils.Alog;
 import com.sk89q.minecraft.util.commands.ChatColor;
 
 
@@ -56,39 +57,15 @@ public class ChoiceMenu extends Menu {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 
-		/*if(p.getInventory().getHelmet() != null){
-			ItemStack hat = p.getInventory().getHelmet();
-			if(hat.getItemMeta().getLore().equals(lore)){
-				p.getInventory().remove(hat);
-			}
-		}
-		if(p.getInventory().getChestplate() != null){
-			ItemStack chestplate = p.getInventory().getChestplate();
-			if(chestplate.getItemMeta().getLore().equals(lore)){
-				p.getInventory().remove(chestplate);
-			}
-		} 
-		if(p.getInventory().getLeggings() != null){
-			ItemStack leggings = p.getInventory().getLeggings();
-			if(leggings.getItemMeta().getLore().equals(lore)){
-				p.getInventory().remove(leggings);
-			}
-		} 
-		if(p.getInventory().getBoots() != null){
-			ItemStack boots = p.getInventory().getBoots();
-			if(boots.getItemMeta().getLore().equals(lore)){
-				p.getInventory().remove(boots);
-			}
-		}*/
-		ItemStack[] player_armor = p.getInventory().getArmorContents();
+		ItemStack[] armor = p.getInventory().getArmorContents();
 		
-		if(player_armor[0].hasItemMeta()){
-			if(player_armor[0].getItemMeta().getLore().contains(lore)){
-				p.getInventory().remove(player_armor[0].getType());
+		for(ItemStack item : armor){
+			if(item.getItemMeta().getLore().equals(lore)){
+				p.getInventory().remove(item);
+				Alog.console("Item Had Lore");
 			}
 		}
 				
-		
 		p.closeInventory();
 		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
 		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
