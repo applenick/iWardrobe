@@ -7,15 +7,17 @@ import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.iWardrobe;
 
 public class InventoryListener implements Listener {
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onArmorClick(InventoryClickEvent event){
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
@@ -42,6 +44,20 @@ public class InventoryListener implements Listener {
 			p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
 			event.setCancelled(true);
 		}	
+	}
+	
+	
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	public void onDrop(PlayerDropItemEvent event){
+		List<String> lore = new ArrayList<String>();
+		lore.add(iWardrobe.wardrobe_lore);
+
+		if(event.getItemDrop().getItemStack().getItemMeta().getLore().equals(lore)){
+			event.setCancelled(true);
+			event.getPlayer().closeInventory();
+			event.getPlayer().sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
+			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
+		}
 	}
 	
 
