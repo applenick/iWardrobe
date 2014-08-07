@@ -83,7 +83,7 @@ public class ChoiceMenu extends Menu {
 		ItemStack[] player_armor = p.getInventory().getArmorContents();
 		
 		if(player_armor[0].hasItemMeta()){
-			if(player_armor[0].getItemMeta().getLore().equals(lore)){
+			if(player_armor[0].getItemMeta().getLore().contains(lore)){
 				p.getInventory().remove(player_armor[0].getType());
 			}
 		}
