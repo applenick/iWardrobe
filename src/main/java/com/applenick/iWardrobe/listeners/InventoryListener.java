@@ -18,8 +18,8 @@ public class InventoryListener implements Listener {
 	public void onArmorClick(InventoryClickEvent event){
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
-		
-		if(event.getCursor().getItemMeta().getLore().equals(lore)){
+				
+		if(event.getCurrentItem().getItemMeta().getLore().equals(lore)){
 			Player p = (Player) event.getWhoClicked();
 			p.closeInventory();
 			p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
