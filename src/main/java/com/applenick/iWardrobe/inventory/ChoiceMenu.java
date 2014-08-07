@@ -80,12 +80,15 @@ public class ChoiceMenu extends Menu {
 				p.getInventory().remove(boots);
 			}
 		}*/
+		ItemStack[] player_armor = p.getInventory().getArmorContents();
 		
-		for(ItemStack itemL : p.getInventory().getArmorContents()){
-			if(itemL.getItemMeta().getLore().equals(lore)){
-				p.getInventory().remove(itemL);
+		if(player_armor[0].hasItemMeta()){
+			if(player_armor[0].getItemMeta().equals(lore)){
+				p.getInventory().remove(player_armor[0].getType());
 			}
 		}
+		
+		
 		p.closeInventory();
 		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
 		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
