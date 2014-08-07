@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.inventory.InventoryType.SlotType;
 
 import com.applenick.iWardrobe.iWardrobe;
 
@@ -20,7 +19,7 @@ public class InventoryListener implements Listener {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 		
-		if(event.getSlotType().equals(SlotType.ARMOR) && event.getCurrentItem().getItemMeta().getLore().equals(lore)){
+		if(event.getCursor().getItemMeta().getLore().equals(lore)){
 			Player p = (Player) event.getWhoClicked();
 			p.closeInventory();
 			p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
