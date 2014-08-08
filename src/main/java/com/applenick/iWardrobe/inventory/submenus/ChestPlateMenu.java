@@ -12,6 +12,7 @@ import net.njay.annotation.MenuItem;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 
 @MenuInventory(slots = 9 ,
 			   name = "§b§nChestplate" ,
@@ -32,6 +33,7 @@ public class ChestPlateMenu extends Menu {
 	public void diamondChestPlate(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(slot = 1 , 
@@ -43,6 +45,7 @@ public class ChestPlateMenu extends Menu {
 	public void goldenChestPlate(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.GOLD_CHESTPLATE));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(slot = 2 , 
@@ -54,6 +57,7 @@ public class ChestPlateMenu extends Menu {
 	public void ironChestPlate(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(slot = 3 , 
@@ -65,6 +69,7 @@ public class ChestPlateMenu extends Menu {
 	public void chainmailChestPlate(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(slot = 4 , 
@@ -76,6 +81,7 @@ public class ChestPlateMenu extends Menu {
 	public void leatherChestPlate(WardrobePlayer player){
 		player.getBukkit().getInventory().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	
@@ -87,6 +93,7 @@ public class ChestPlateMenu extends Menu {
 			)
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 }

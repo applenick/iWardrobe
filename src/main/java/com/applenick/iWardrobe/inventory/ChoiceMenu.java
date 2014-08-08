@@ -17,6 +17,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 import com.applenick.iWardrobe.utils.Alog;
 import com.sk89q.minecraft.util.commands.ChatColor;
 
@@ -50,6 +51,7 @@ public class ChoiceMenu extends Menu {
 			)
 	public void denyDelete(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	private void deleteInventory(WardrobePlayer player){

@@ -13,6 +13,7 @@ import org.bukkit.inventory.Inventory;
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
 import com.applenick.iWardrobe.inventory.submenus.HatMenu;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 import com.applenick.iWardrobe.utils.ItemUtils;
 
 
@@ -38,6 +39,7 @@ public class ArmorHelmets extends Menu {
 	public void diamondHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.DIAMOND_HELMET, ChatColor.AQUA + "Diamond Helmet", helmetLore));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -50,6 +52,7 @@ public class ArmorHelmets extends Menu {
 	public void goldenHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.GOLD_HELMET, ChatColor.YELLOW + "Golden Helmet", helmetLore));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 2 , 
@@ -61,6 +64,7 @@ public class ArmorHelmets extends Menu {
 	public void ironHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.IRON_HELMET, ChatColor.GRAY + "Iron Helmet", helmetLore));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -73,6 +77,7 @@ public class ArmorHelmets extends Menu {
 	public void chainHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHAINMAIL_HELMET, ChatColor.DARK_GRAY + "Chainmail Helmet", helmetLore));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 4 , 
@@ -84,6 +89,7 @@ public class ArmorHelmets extends Menu {
 	public void leatherHelmet(WardrobePlayer player){
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEATHER_HELMET, ChatColor.GOLD + "Leather Helmet", helmetLore));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -95,6 +101,7 @@ public class ArmorHelmets extends Menu {
 			)
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 }

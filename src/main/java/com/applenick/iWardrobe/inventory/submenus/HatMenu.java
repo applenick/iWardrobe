@@ -15,6 +15,7 @@ import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.inventory.submenus.hats.ArmorHelmets;
 import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 
 
 @MenuInventory(slots = 9 ,
@@ -42,6 +43,7 @@ public class HatMenu extends Menu {
 			)
 	public void openNormalHats(WardrobePlayer player){
 		player.setActiveMenu(new ArmorHelmets(manager, null));
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(slot = 5 , 
@@ -52,6 +54,7 @@ public class HatMenu extends Menu {
 			)
 	public void openBlockHats(WardrobePlayer player){
 		player.setActiveMenu(new FunHelmets(manager, null));
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -63,5 +66,6 @@ public class HatMenu extends Menu {
 			)
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 }

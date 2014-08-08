@@ -17,6 +17,7 @@ import com.applenick.iWardrobe.inventory.submenus.HatMenu;
 import com.applenick.iWardrobe.inventory.submenus.PantsMenu;
 import com.applenick.iWardrobe.inventory.submenus.hats.ArmorHelmets;
 import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 
 
 @MenuInventory(
@@ -64,6 +65,7 @@ public class WardrobeMenu extends Menu {
 			)
 	public void openChestplate(WardrobePlayer player){
 		player.setActiveMenu(new ChestPlateMenu(manager , null));
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(
@@ -76,6 +78,7 @@ public class WardrobeMenu extends Menu {
 			)
 	public void openLegs(WardrobePlayer player){
 		player.setActiveMenu(new PantsMenu(manager , null));
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	@MenuItem(
@@ -88,6 +91,7 @@ public class WardrobeMenu extends Menu {
 			)
 	public void openBoots(WardrobePlayer player){
 		player.setActiveMenu(new BootsMenu(manager , null));
+		SoundUtil.click(player.getBukkit());
 	}
 	
 	
@@ -101,6 +105,7 @@ public class WardrobeMenu extends Menu {
 			)
 	public void resetWardrobe(WardrobePlayer player){
 		player.setActiveMenu(new ChoiceMenu(manager , null));
+		SoundUtil.click(player.getBukkit());
 	}
 		
 }

@@ -12,6 +12,7 @@ import net.njay.annotation.MenuItem;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 
 
 @MenuInventory(slots = 9 ,
@@ -33,6 +34,7 @@ public class PantsMenu extends Menu {
 	public void diamondLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 1 , 
@@ -44,6 +46,7 @@ public class PantsMenu extends Menu {
 	public void goldenLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setLeggings(new ItemStack(Material.GOLD_LEGGINGS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 2 , 
@@ -55,6 +58,7 @@ public class PantsMenu extends Menu {
 	public void ironLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 3 , 
@@ -66,6 +70,7 @@ public class PantsMenu extends Menu {
 	public void chainmailLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setLeggings(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 4 , 
@@ -77,6 +82,7 @@ public class PantsMenu extends Menu {
 	public void leatherLegs(WardrobePlayer player){
 		player.getBukkit().getInventory().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -88,6 +94,7 @@ public class PantsMenu extends Menu {
 			)
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 }

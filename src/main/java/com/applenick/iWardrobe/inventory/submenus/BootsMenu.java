@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
+import com.applenick.iWardrobe.sounds.SoundUtil;
 
 
 @MenuInventory(slots = 9 ,
@@ -33,6 +34,7 @@ public class BootsMenu extends Menu {
 	public void diamondBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 1 , 
@@ -44,6 +46,7 @@ public class BootsMenu extends Menu {
 	public void goldenBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setBoots(new ItemStack(Material.GOLD_BOOTS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 2 , 
@@ -55,6 +58,7 @@ public class BootsMenu extends Menu {
 	public void ironBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 3 , 
@@ -66,6 +70,7 @@ public class BootsMenu extends Menu {
 	public void chainmailBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(slot = 4 , 
@@ -77,6 +82,7 @@ public class BootsMenu extends Menu {
 	public void leatherBoots(WardrobePlayer player){
 		player.getBukkit().getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 
@@ -88,6 +94,7 @@ public class BootsMenu extends Menu {
 			)
 	public void closeInv(WardrobePlayer player){
 		player.getBukkit().closeInventory();
+		SoundUtil.click(player.getBukkit());
 	}
 
 }
