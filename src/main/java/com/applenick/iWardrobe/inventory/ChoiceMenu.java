@@ -62,9 +62,8 @@ public class ChoiceMenu extends Menu {
 		ItemStack[] armor = p.getInventory().getArmorContents();
 		
 		for(ItemStack item : armor){
-			if(item.getItemMeta().getLore().equals(lore)){
+			if(!(item.getItemMeta().getLore().isEmpty())){
 				p.getInventory().remove(item);
-				Alog.console("Item Had Lore");
 			}
 		}
 				
