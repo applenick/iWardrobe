@@ -62,15 +62,15 @@ public class ChoiceMenu extends Menu {
 
 		for(ItemStack item : armor){
 			if(!(item.getType().equals(Material.AIR))){
-				if(!(item.getItemMeta().getLore().isEmpty())){
+				if(item.getItemMeta().getLore().contains(lore)){
 					p.getInventory().remove(item);
 				}				
 			}
-
-
-			p.closeInventory();
-			p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
-			p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
 		}
+
+
+		p.closeInventory();
+		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
+		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
 	}
 }

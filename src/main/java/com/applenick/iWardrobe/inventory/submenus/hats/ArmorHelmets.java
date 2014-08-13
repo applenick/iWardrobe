@@ -12,14 +12,14 @@ import org.bukkit.inventory.Inventory;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
-import com.applenick.iWardrobe.inventory.submenus.HatMenu;
+import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.sounds.SoundUtil;
 import com.applenick.iWardrobe.utils.ItemUtils;
 
 
 @MenuInventory(slots = 9 ,
 				name = "§bArmor Helmets" ,
-				onClose = HatMenu.class
+				onClose = WardrobeMenu.class
 				)
 public class ArmorHelmets extends Menu {
 

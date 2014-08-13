@@ -11,11 +11,11 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
-import com.applenick.iWardrobe.inventory.submenus.HatMenu;
+import com.applenick.iWardrobe.inventory.WardrobeMenu;
 
 @MenuInventory(slots = 36 ,
 name = "§dFun Helmets" ,
-onClose = HatMenu.class)
+onClose = WardrobeMenu.class)
 public class FunHelmets extends Menu {
 
 	public FunHelmets(MenuManager manager, Inventory inv) {
