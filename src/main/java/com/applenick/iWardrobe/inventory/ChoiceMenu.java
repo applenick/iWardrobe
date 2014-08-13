@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;
 import com.applenick.iWardrobe.sounds.SoundUtil;
-import com.applenick.iWardrobe.utils.Alog;
 import com.sk89q.minecraft.util.commands.ChatColor;
 
 
@@ -60,17 +59,18 @@ public class ChoiceMenu extends Menu {
 		lore.add(iWardrobe.wardrobe_lore);
 
 		ItemStack[] armor = p.getInventory().getArmorContents();
-		
+
 		for(ItemStack item : armor){
 			if(!(item.getType().equals(Material.AIR))){
 				if(!(item.getItemMeta().getLore().isEmpty())){
 					p.getInventory().remove(item);
 				}				
 			}
-			
-				
-		p.closeInventory();
-		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
-		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
+
+
+			p.closeInventory();
+			p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
+			p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
+		}
 	}
 }
