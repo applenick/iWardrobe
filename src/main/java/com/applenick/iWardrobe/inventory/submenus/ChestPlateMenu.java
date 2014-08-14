@@ -1,15 +1,14 @@
 package com.applenick.iWardrobe.inventory.submenus;
 
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-
 import net.njay.Menu;
 import net.njay.MenuManager;
 import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.inventory.Inventory;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.iWardrobe;

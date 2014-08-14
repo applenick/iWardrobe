@@ -9,7 +9,6 @@ import net.njay.annotation.NestedMenu;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
