@@ -312,12 +312,12 @@ public class FunHelmets extends Menu {
 	
 	@MenuItem(slot = 26 , 
 			item = @ItemStackAnnotation(
-					material = Material.COAL_BLOCK,
-					name = "§7Coal Hat" ,
+					material = Material.DIAMOND_BLOCK,
+					name = "§bDiamond Hat" ,
 					lore = "§6Super Fun")
 			 )
-	public void coalHat(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.COAL_BLOCK, ChatColor.GRAY + "Coal Hat", iWardrobe.wardrobe_lore));
+	public void diamondHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.DIAMOND_BLOCK, ChatColor.AQUA + "Diamond Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	
