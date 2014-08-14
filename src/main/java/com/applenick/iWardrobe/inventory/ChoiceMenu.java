@@ -64,7 +64,7 @@ public class ChoiceMenu extends Menu {
 			ItemStack item = armor[i];
 			
 			if(!(item.getType().equals(Material.AIR))){
-				item.setAmount(0);
+				item.setType(Material.AIR);
 			}
 			
 		}
