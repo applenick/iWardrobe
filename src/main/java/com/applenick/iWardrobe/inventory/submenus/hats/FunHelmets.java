@@ -93,7 +93,7 @@ public class FunHelmets extends Menu {
 	@MenuItem(slot = 6 , 
 			item = @ItemStackAnnotation(
 					material = Material.REDSTONE_BLOCK ,
-					name = "§cRedstone Wizard" ,
+					name = "§cRedstone Hat" ,
 					lore = "§6Super Fun")
 			 )
 	public void redstoneHelmet(WardrobePlayer player){
@@ -108,7 +108,7 @@ public class FunHelmets extends Menu {
 					lore = "§6Super Fun")
 			 )
 	public void leafHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEAVES, ChatColor.DARK_GREEN + "Nature Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEAVES, ChatColor.DARK_GREEN + "Leafy Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	
@@ -130,7 +130,7 @@ public class FunHelmets extends Menu {
 					lore = "§6Super Fun")
 			 )
 	public void furnHat(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.FURNACE, ChatColor.RED + "Oven Head", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.FURNACE, ChatColor.RED + "Furnace Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	
@@ -141,9 +141,43 @@ public class FunHelmets extends Menu {
 					lore = "§6Super Fun")
 			 )
 	public void chestHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHEST, ChatColor.GOLD + "Storage Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHEST, ChatColor.GOLD + "Chest Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
+	
+	@MenuItem(slot = 11 , 
+			item = @ItemStackAnnotation(
+					material = Material.PISTON_BASE ,
+					name = "§8Piston Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void pistonHelmet(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.PISTON_BASE, ChatColor.DARK_GRAY + "Piston Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 12 , 
+			item = @ItemStackAnnotation(
+					material = Material.PISTON_STICKY_BASE ,
+					name = "§aSticky Piston Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void stickyPistonHelmet(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.PISTON_STICKY_BASE, ChatColor.GREEN + "Sticky Piston Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 13 , 
+			item = @ItemStackAnnotation(
+					material = Material.REDSTONE_LAMP_ON ,
+					name = "§aRedstone Lamp Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void redstoneLamp(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.REDSTONE_LAMP_ON, ChatColor.DARK_RED + "Redstone Lamp Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+
 
 
 
