@@ -60,8 +60,8 @@ public class HatMenu extends Menu {
 	@MenuItem(slot = 3 , 
 			item = @ItemStackAnnotation(
 					material = Material.WOOL ,
-					name = "§aColorful Hats" ,
-					lore = "§aWorld §bOf §cColor")
+					name = "§aC§bo§cl§do§er§fu§a0l Hats" ,
+					lore = "§dWorld §bOf §6Color")
 			)
 	public void openColorfulHats(WardrobePlayer player){
 		player.setActiveMenu(new FunHelmets(manager, null));
