@@ -66,21 +66,20 @@ public class InventoryListener implements Listener {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 		
-		Player p = event.getEntity();
+		Player p = (Player) event.getEntity();
 		
 		ItemStack[] armor = p.getInventory().getArmorContents();
 		
 		boolean save = false;
 		
-		for(ItemStack item : armor){
-			if(item.hasItemMeta()){
-				save = true;
-			}
+		if(armor[0].hasItemMeta()){
+			save = true;
 		}
 		
 		if(save){
 			ItemStack[] armorClone = armor.clone();
 			p.getInventory().setArmorContents(armorClone);
+			p.sendMessage("DEBUG - Inv Restored");
 		}
 		
 		
