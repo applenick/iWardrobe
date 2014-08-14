@@ -61,10 +61,21 @@ public class ChoiceMenu extends Menu {
 		ItemStack[] armor = p.getInventory().getContents();
 
 		for(ItemStack item : armor){
-			if(!(item.getType().equals(Material.AIR))){
-				if(item.hasItemMeta()){
-					item.setType(Material.AIR);
-				}				
+			
+			if(item.getType().equals(Material.AIR)){
+				return;
+			}
+			
+			if(item.hasItemMeta()){
+				
+				if(item.getItemMeta().equals(lore)){
+					
+					if(p.getInventory().getHelmet() != null){
+						p.getInventory().getHelmet().setType(Material.AIR);
+					}
+					
+				}
+				
 			}
 		}
 
