@@ -60,16 +60,10 @@ public class ChoiceMenu extends Menu {
 
 		ItemStack[] armor = p.getInventory().getArmorContents();
 
-		for(int i = 0 ; i<p.getInventory().getArmorContents().length; i++){
-			ItemStack item = armor[i];
-			
-			if(!(item.getType().equals(Material.AIR))){
-				item.setType(Material.AIR);
-			}
-			
+		if(armor[0].hasItemMeta() || armor[1].hasItemMeta() || armor[2].hasItemMeta() || armor[3].hasItemMeta()){
+			p.getInventory().setArmorContents(null);
 		}
-
-
+		
 		p.closeInventory();
 		p.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "✓" + ChatColor.AQUA + " Your Wardrobe has been cleared.");
 		p.playSound(p.getLocation(), Sound.LEVEL_UP, 3, 3);
