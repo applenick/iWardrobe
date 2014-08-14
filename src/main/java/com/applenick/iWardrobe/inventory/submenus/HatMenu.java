@@ -34,7 +34,7 @@ public class HatMenu extends Menu {
 	}
 
 
-	@MenuItem(slot = 3 , 
+	@MenuItem(slot = 0 , 
 			item = @ItemStackAnnotation(
 					material = Material.DIAMOND_HELMET ,
 					name = "§3Normal Hats" ,
@@ -45,13 +45,25 @@ public class HatMenu extends Menu {
 		SoundUtil.click(player.getBukkit());
 	}
 	
-	@MenuItem(slot = 5 , 
+	@MenuItem(slot = 6 , 
 			item = @ItemStackAnnotation(
 					material = Material.TNT ,
 					name = "§aFun Hats" ,
 					lore = "§6Blocks N Stuff")
 			)
 	public void openBlockHats(WardrobePlayer player){
+		player.setActiveMenu(new FunHelmets(manager, null));
+		SoundUtil.click(player.getBukkit());
+	}
+	
+	
+	@MenuItem(slot = 3 , 
+			item = @ItemStackAnnotation(
+					material = Material.WOOL ,
+					name = "§aColorful Hats" ,
+					lore = "§aWorld §bOf §cColor")
+			)
+	public void openColorfulHats(WardrobePlayer player){
 		player.setActiveMenu(new FunHelmets(manager, null));
 		SoundUtil.click(player.getBukkit());
 	}
