@@ -17,7 +17,7 @@ import com.applenick.iWardrobe.iWardrobe;
 
 public class InventoryListener implements Listener {
 	
-	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onArmorClick(InventoryClickEvent event){
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
@@ -27,27 +27,26 @@ public class InventoryListener implements Listener {
 			ItemStack item = event.getWhoClicked().getInventory().getItem(event.getHotbarButton());
 			
 			if(item.getItemMeta().getLore().equals(lore)){
+				event.setCancelled(true);
 				Player p = (Player) event.getWhoClicked();
 				p.closeInventory();
 				p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
 				p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
-				event.setCancelled(true);
 			}	
 		} else
 		
 		
 		if(event.getCurrentItem().getItemMeta().getLore().equals(lore)){
-						
+			event.setCancelled(true);		
 			Player p = (Player) event.getWhoClicked();
 			p.closeInventory();
 			p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
 			p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
-			event.setCancelled(true);
 		}	
 	}
 	
 	
-	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onDrop(PlayerDropItemEvent event){
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
@@ -55,7 +54,7 @@ public class InventoryListener implements Listener {
 		if(event.getItemDrop().getItemStack().getItemMeta().getLore().equals(lore)){
 			event.setCancelled(true);
 			event.getPlayer().closeInventory();
-			event.getPlayer().sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
+			event.getPlayer().sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to drop Wardrobe Items");
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
 		}
 	}
