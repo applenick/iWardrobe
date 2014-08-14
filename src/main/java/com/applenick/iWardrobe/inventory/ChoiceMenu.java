@@ -58,7 +58,7 @@ public class ChoiceMenu extends Menu {
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
 
-		ItemStack[] armor = p.getInventory().getContents();
+		ItemStack[] armor = p.getInventory().getArmorContents();
 
 		for(ItemStack item : armor){
 			
