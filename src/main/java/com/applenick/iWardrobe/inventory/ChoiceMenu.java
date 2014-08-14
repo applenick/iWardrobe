@@ -62,7 +62,7 @@ public class ChoiceMenu extends Menu {
 
 		for(ItemStack item : armor){
 			if(!(item.getType().equals(Material.AIR))){
-				if(item.getItemMeta().getLore().equals(lore)){
+				if(item.hasItemMeta()){
 					item.setType(Material.AIR);
 				}				
 			}
