@@ -51,12 +51,12 @@ public class FunHelmets extends Menu {
 	}
 	@MenuItem(slot = 2 , 
 			item = @ItemStackAnnotation(
-					material = Material.CAKE ,
+					material = Material.CAKE_BLOCK ,
 					name = "§dBirthday Cake Hat" ,
 					lore = "§6Super Fun")
 			 )
 	public void cakeHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CAKE_BLOCK, ChatColor.LIGHT_PURPLE + "Birthday Cake", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CAKE, ChatColor.LIGHT_PURPLE + "Birthday Cake", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	@MenuItem(slot = 3 , 
