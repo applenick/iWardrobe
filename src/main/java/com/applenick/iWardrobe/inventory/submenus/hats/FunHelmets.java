@@ -177,6 +177,39 @@ public class FunHelmets extends Menu {
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.REDSTONE_LAMP_OFF, ChatColor.DARK_RED + "Redstone Lamp Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
+	
+	@MenuItem(slot = 14 , 
+			item = @ItemStackAnnotation(
+					material = Material.NOTE_BLOCK,
+					name = "§bSoundsational Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void soundsational(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.NOTE_BLOCK, ChatColor.AQUA + "Soundsational Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 15 , 
+			item = @ItemStackAnnotation(
+					material = Material.BEACON,
+					name = "§1Beacon Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void beacon(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.BEACON, ChatColor.AQUA + "Beacon Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 16 , 
+			item = @ItemStackAnnotation(
+					material = Material.DISPENSER,
+					name = "§7Dispenser Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void dispen(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.DISPENSER, ChatColor.GRAY + "Dispenser Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
 
 
 
