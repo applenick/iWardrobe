@@ -49,7 +49,7 @@ public class ChoiceMenu extends Menu {
 					lore = "§cDo not remove, and return to menu.")
 			)
 	public void denyDelete(WardrobePlayer player){
-		player.getBukkit().closeInventory();
+		player.setActiveMenu(WardrobeMenu.class);
 		SoundUtil.click(player.getBukkit());
 	}
 

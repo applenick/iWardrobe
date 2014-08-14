@@ -68,6 +68,21 @@ public class InventoryListener implements Listener {
 		
 		Player p = event.getEntity();
 		
+		ItemStack[] armor = p.getInventory().getArmorContents();
+		
+		boolean save = false;
+		
+		for(ItemStack item : armor){
+			if(item.hasItemMeta()){
+				save = true;
+			}
+		}
+		
+		if(save){
+			ItemStack[] armorClone = armor.clone();
+			p.getInventory().setArmorContents(armorClone);
+		}
+		
 		
 	}
 	
