@@ -1,6 +1,7 @@
 package com.applenick.iWardrobe.listeners;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.ChatColor;
@@ -12,11 +13,15 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.iWardrobe;
 
 public class InventoryListener implements Listener {
+	
+	private HashMap<String, ItemStack[]> death_invs = new HashMap<String, ItemStack[]>();
+
 	
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onArmorClick(InventoryClickEvent event){
@@ -70,19 +75,22 @@ public class InventoryListener implements Listener {
 		
 		ItemStack[] armor = p.getInventory().getArmorContents();
 		
-		boolean save = false;
-		
-		if(armor[0].hasItemMeta()){
-			save = true;
+		if(armor[0].getItemMeta().hasLore() || armor[1].getItemMeta().hasLore() || armor[2].getItemMeta().hasLore() || armor[3].getItemMeta().hasLore()){
+			death_invs.put(p.getName(), armor);
+			event.getDrops().clear();
 		}
 		
-		if(save){
-			ItemStack[] armorClone = armor.clone();
-			p.getInventory().setArmorContents(armorClone);
-			p.sendMessage("DEBUG - Inv Restored");
+	}
+	
+	@EventHandler(priority = EventPriority.NORMAL)
+	public void onRespawn(PlayerRespawnEvent event){
+		Player p = event.getPlayer();
+		
+		if(death_invs.containsKey(p.getName())){
+			ItemStack[] armor = death_invs.get(p.getName());
+			p.getInventory().setArmorContents(armor);
+			death_invs.remove(p.getName());
 		}
-		
-		
 	}
 	
 
