@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event.Result;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -25,19 +26,21 @@ public class InventoryListener implements Listener {
 		
 		
 		if (event.getHotbarButton() != -1){
-			ItemStack item = event.getWhoClicked().getInventory().getItem(event.getHotbarButton());
-			
-			
-			if(item.getItemMeta().getLore().equals(lore)){
-				item.setType(null);
-				event.setCancelled(true);
-				Player p = (Player) event.getWhoClicked();
-				p.closeInventory();
-				p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to move Wardrobe Items");
-				p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
-			}	
-		} else
-		
+			ItemStack itemMoved = event.getWhoClicked().getInventory().getItem(event.getHotbarButton());
+				if(itemMoved.hasItemMeta()){
+					
+					event.setResult(Result.DENY);
+
+					event.setCancelled(true);
+					
+					Player p = (Player) event.getWhoClicked();
+					p.closeInventory();
+					p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to move Wardrobe Items");
+					p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
+
+					
+				}
+			} else
 		
 		if(event.getCurrentItem().getItemMeta().getLore().equals(lore)){
 			event.setCancelled(true);		
