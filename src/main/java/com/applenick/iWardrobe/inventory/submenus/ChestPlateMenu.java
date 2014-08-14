@@ -34,7 +34,7 @@ public class ChestPlateMenu extends Menu {
 					lore = "§6Top of the Line")
 			)
 	public void diamondChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.DIAMOND_CHESTPLATE, ChatColor.AQUA + "Diamond Chestplate", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setChestplate(ItemUtils.getLoreItem(Material.DIAMOND_CHESTPLATE, ChatColor.AQUA + "Diamond Chestplate", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -46,7 +46,7 @@ public class ChestPlateMenu extends Menu {
 					lore = "§6For the stylish ones")
 			)
 	public void goldenChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.GOLD_CHESTPLATE, ChatColor.YELLOW + "Gold Chestplate", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setChestplate(ItemUtils.getLoreItem(Material.GOLD_CHESTPLATE, ChatColor.YELLOW + "Gold Chestplate", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -58,7 +58,7 @@ public class ChestPlateMenu extends Menu {
 					lore = "§6Strong yet simple")
 			)
 	public void ironChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.IRON_CHESTPLATE, ChatColor.GRAY + "Iron Chestplate", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setChestplate(ItemUtils.getLoreItem(Material.IRON_CHESTPLATE, ChatColor.GRAY + "Iron Chestplate", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -70,7 +70,7 @@ public class ChestPlateMenu extends Menu {
 					lore = "§6A hidden beauty")
 			)
 	public void chainmailChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.CHAINMAIL_CHESTPLATE, ChatColor.RED + "Chainmail Chestplate", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setChestplate(ItemUtils.getLoreItem(Material.CHAINMAIL_CHESTPLATE, ChatColor.RED + "Chainmail Chestplate", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -82,7 +82,7 @@ public class ChestPlateMenu extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherChestPlate(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.LEATHER_CHESTPLATE, ChatColor.LIGHT_PURPLE + "Leather Chestplate", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setChestplate(ItemUtils.getLoreItem(Material.LEATHER_CHESTPLATE, ChatColor.LIGHT_PURPLE + "Leather Chestplate", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}

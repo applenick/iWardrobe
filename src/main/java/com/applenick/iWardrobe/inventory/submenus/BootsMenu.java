@@ -35,7 +35,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Top of the line")
 			)
 	public void diamondBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.DIAMOND_BOOTS, ChatColor.AQUA + "Diamond Boots", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setBoots(ItemUtils.getLoreItem(Material.DIAMOND_BOOTS, ChatColor.AQUA + "Diamond Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -47,7 +47,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the stylish one")
 			)
 	public void goldenBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.GOLD_BOOTS, ChatColor.YELLOW + "Gold Boots", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setBoots(ItemUtils.getLoreItem(Material.GOLD_BOOTS, ChatColor.YELLOW + "Gold Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -59,7 +59,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Strong yet simple")
 			)
 	public void ironBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.IRON_BOOTS, ChatColor.GRAY + "Iron Boots", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setBoots(ItemUtils.getLoreItem(Material.IRON_BOOTS, ChatColor.GRAY + "Iron Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -71,7 +71,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Hidden beauty")
 			)
 	public void chainmailBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.CHAINMAIL_BOOTS, ChatColor.RED + "Chainmail Boots", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setBoots(ItemUtils.getLoreItem(Material.CHAINMAIL_BOOTS, ChatColor.RED + "Chainmail Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -83,7 +83,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.LEATHER_BOOTS, ChatColor.LIGHT_PURPLE + "Leather Boots", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setBoots(ItemUtils.getLoreItem(Material.LEATHER_BOOTS, ChatColor.LIGHT_PURPLE + "Leather Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
