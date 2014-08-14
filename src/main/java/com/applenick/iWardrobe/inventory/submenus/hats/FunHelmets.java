@@ -210,6 +210,52 @@ public class FunHelmets extends Menu {
 		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.DISPENSER, ChatColor.GRAY + "Dispenser Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
+	
+	@MenuItem(slot = 17 , 
+			item = @ItemStackAnnotation(
+					material = Material.LAPIS_BLOCK,
+					name = "§9Lapis Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void lapis(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LAPIS_BLOCK, ChatColor.BLUE + "Lapis Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 18 , 
+			item = @ItemStackAnnotation(
+					material = Material.JACK_O_LANTERN,
+					name = "§6Halloween Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void hallow(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.JACK_O_LANTERN, ChatColor.GOLD + "Halloween Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 19 , 
+			item = @ItemStackAnnotation(
+					material = Material.SNOW_BLOCK,
+					name = "§fSnowman Hat" ,
+					lore = "§dWanna Build a... §fSnowman?")
+			 )
+	public void snow(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.SNOW_BLOCK, ChatColor.WHITE + "Snowman Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 20 , 
+			item = @ItemStackAnnotation(
+					material = Material.ENDER_CHEST,
+					name = "§0Ender Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void enderChest(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENDER_CHEST, ChatColor.BLACK + "Ender Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	
 
 
 
