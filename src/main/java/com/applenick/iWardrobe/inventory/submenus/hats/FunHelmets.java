@@ -169,12 +169,12 @@ public class FunHelmets extends Menu {
 	
 	@MenuItem(slot = 13 , 
 			item = @ItemStackAnnotation(
-					material = Material.REDSTONE_LAMP_ON ,
+					material = Material.REDSTONE_LAMP_OFF,
 					name = "§aRedstone Lamp Hat" ,
 					lore = "§6Super Fun")
 			 )
 	public void redstoneLamp(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.REDSTONE_LAMP_ON, ChatColor.DARK_RED + "Redstone Lamp Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.REDSTONE_LAMP_OFF, ChatColor.DARK_RED + "Redstone Lamp Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 
