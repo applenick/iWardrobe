@@ -247,11 +247,66 @@ public class FunHelmets extends Menu {
 	@MenuItem(slot = 20 , 
 			item = @ItemStackAnnotation(
 					material = Material.ENDER_CHEST,
-					name = "§0Ender Hat" ,
+					name = "§5Ender Hat" ,
 					lore = "§6Super Fun")
 			 )
 	public void enderChest(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENDER_CHEST, ChatColor.BLACK + "Ender Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENDER_CHEST, ChatColor.DARK_PURPLE + "Ender Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 21 , 
+			item = @ItemStackAnnotation(
+					material = Material.SPONGE,
+					name = "§eCheesy Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void cheeseHead(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.SPONGE, ChatColor.YELLOW + "Cheese Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 22 , 
+			item = @ItemStackAnnotation(
+					material = Material.GRASS,
+					name = "§aGrassy Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void grassyHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.GRASS, ChatColor.GREEN + "Grassy Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 23 , 
+			item = @ItemStackAnnotation(
+					material = Material.MELON_BLOCK,
+					name = "§2Melon Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void melonHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.MELON_BLOCK, ChatColor.DARK_GREEN + "Melon Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 24 , 
+			item = @ItemStackAnnotation(
+					material = Material.HAY_BLOCK,
+					name = "§eHay Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void hayHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.HAY_BLOCK, ChatColor.YELLOW + "Hay Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 25 , 
+			item = @ItemStackAnnotation(
+					material = Material.COAL_BLOCK,
+					name = "§7Coal Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void coalHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.COAL_BLOCK, ChatColor.GRAY + "Coal Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	
