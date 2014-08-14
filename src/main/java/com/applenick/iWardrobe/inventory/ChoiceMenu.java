@@ -64,7 +64,7 @@ public class ChoiceMenu extends Menu {
 						
 			if(item.hasItemMeta()){
 				
-				if(item.getItemMeta().equals(lore)){
+				if(item.getItemMeta().getLore().equals(lore)){
 					
 					if(p.getInventory().getHelmet() != null){
 						p.getInventory().getHelmet().setType(Material.AIR);
