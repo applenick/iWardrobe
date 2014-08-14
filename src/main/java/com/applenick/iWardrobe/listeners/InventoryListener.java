@@ -26,19 +26,13 @@ public class InventoryListener implements Listener {
 		
 		
 		if (event.getHotbarButton() != -1){
-			ItemStack itemMoved = event.getWhoClicked().getInventory().getItem(event.getHotbarButton());
-				if(itemMoved.hasItemMeta()){
-					
-					event.setResult(Result.DENY);
-
+			ItemStack itemMoved = event.getCurrentItem();
+				if(itemMoved.getItemMeta().getLore().equals(lore)){
 					event.setCancelled(true);
-					
 					Player p = (Player) event.getWhoClicked();
 					p.closeInventory();
 					p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to move Wardrobe Items");
 					p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
-
-					
 				}
 			} else
 		
