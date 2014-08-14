@@ -45,7 +45,7 @@ public class WardrobeMenu extends Menu {
 	@MenuItem(
 			slot = 4,
 			item = @ItemStackAnnotation(
-					material = Material.DIAMOND_HELMET,
+					material = Material.LEATHER_HELMET,
 					name = "§aHats",
 					lore = "§6Select your §aHat"
 					)
@@ -58,7 +58,7 @@ public class WardrobeMenu extends Menu {
 	@MenuItem(
 			slot = 13,
 			item = @ItemStackAnnotation(
-					material = Material.IRON_CHESTPLATE,
+					material = Material.GOLD_CHESTPLATE,
 					name = "§3Chestplates",
 					lore = "§6Select your §3Chestplate"
 					)
@@ -71,7 +71,7 @@ public class WardrobeMenu extends Menu {
 	@MenuItem(
 			slot = 22,
 			item = @ItemStackAnnotation(
-					material = Material.CHAINMAIL_LEGGINGS,
+					material = Material.IRON_LEGGINGS,
 					name = "§cPants",
 					lore = "§6Select your §cPants"
 					)
@@ -84,7 +84,7 @@ public class WardrobeMenu extends Menu {
 	@MenuItem(
 			slot = 31,
 			item = @ItemStackAnnotation(
-					material = Material.GOLD_BOOTS,
+					material = Material.DIAMOND_BOOTS,
 					name = "§eBoots",
 					lore = "§6Select your §eBoots"
 					)
