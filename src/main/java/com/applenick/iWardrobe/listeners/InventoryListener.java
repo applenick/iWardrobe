@@ -87,7 +87,7 @@ public class InventoryListener implements Listener {
 		Player p = event.getPlayer();
 		
 		if(death_invs.containsKey(p.getName())){
-			ItemStack[] armor = death_invs.get(p.getName());
+			ItemStack[] armor = death_invs.get(p.getName()).clone();
 			p.getInventory().setArmorContents(armor);
 			death_invs.remove(p.getName());
 		}
