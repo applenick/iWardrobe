@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
@@ -26,11 +27,13 @@ public class InventoryListener implements Listener {
 		if (event.getHotbarButton() != -1){
 			ItemStack item = event.getWhoClicked().getInventory().getItem(event.getHotbarButton());
 			
+			
 			if(item.getItemMeta().getLore().equals(lore)){
+				item.setType(null);
 				event.setCancelled(true);
 				Player p = (Player) event.getWhoClicked();
 				p.closeInventory();
-				p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to interact with Wardrobe Items");
+				p.sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to move Wardrobe Items");
 				p.playSound(p.getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
 			}	
 		} else
@@ -57,6 +60,17 @@ public class InventoryListener implements Listener {
 			event.getPlayer().sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to drop Wardrobe Items");
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.MAGMACUBE_JUMP, 6, 6);
 		}
+	}
+	
+	
+	@EventHandler(priority = EventPriority.HIGH)
+	public void onDeath(PlayerDeathEvent event){
+		List<String> lore = new ArrayList<String>();
+		lore.add(iWardrobe.wardrobe_lore);
+		
+		Player p = event.getEntity();
+		
+		
 	}
 	
 
