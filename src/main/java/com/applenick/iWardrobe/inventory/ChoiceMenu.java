@@ -39,7 +39,7 @@ public class ChoiceMenu extends Menu {
 					lore = "§aRemove My Current Wardrobe Selection")
 			)
 	public void deleteWardrobe(WardrobePlayer player){
-		deleteInventory(player);
+		resetArmor(player);
 	}
 
 	@MenuItem(slot = 5 , 
@@ -53,7 +53,7 @@ public class ChoiceMenu extends Menu {
 		SoundUtil.click(player.getBukkit());
 	}
 
-	private void deleteInventory(WardrobePlayer player){
+	private void resetArmor(WardrobePlayer player){
 		Player p = player.getBukkit();
 		List<String> lore = new ArrayList<String>();
 		lore.add(iWardrobe.wardrobe_lore);
@@ -61,19 +61,8 @@ public class ChoiceMenu extends Menu {
 		ItemStack[] armor = p.getInventory().getArmorContents();
 
 		for(ItemStack item : armor){
-						
-			if(item.hasItemMeta()){
-				
-				if(item.getItemMeta().getLore().equals(lore)){
-					
-					if(p.getInventory().getHelmet() != null){
-						p.getInventory().getHelmet().setType(Material.AIR);
-					}
-					
-				}
-				
-			}
-		}
+			item.setType(Material.AIR);
+		}	
 
 
 		p.closeInventory();
