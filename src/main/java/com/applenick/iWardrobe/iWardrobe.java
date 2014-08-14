@@ -14,7 +14,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.applenick.iWardrobe.commands.WardrobeCommands;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.listeners.InventoryListener;
-import com.applenick.iWardrobe.listeners.PlayerLogins;
 import com.sk89q.bukkit.util.CommandsManagerRegistration;
 import com.sk89q.minecraft.util.commands.CommandException;
 import com.sk89q.minecraft.util.commands.CommandPermissionsException;
