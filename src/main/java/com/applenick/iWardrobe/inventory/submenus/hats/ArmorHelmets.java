@@ -75,7 +75,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6 A hidden beauty")
 			)
 	public void chainHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHAINMAIL_HELMET, ChatColor.DARK_GRAY + "Chainmail Helmet", helmetLore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CHAINMAIL_HELMET, ChatColor.RED + "Chainmail Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -87,7 +87,7 @@ public class ArmorHelmets extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEATHER_HELMET, ChatColor.GOLD + "Leather Helmet", helmetLore));
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.LEATHER_HELMET, ChatColor.LIGHT_PURPLE + "Leather Helmet", helmetLore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
