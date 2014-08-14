@@ -52,6 +52,8 @@ public class InventoryListener implements Listener {
 		lore.add(iWardrobe.wardrobe_lore);
 
 		if(event.getItemDrop().getItemStack().getItemMeta().getLore().equals(lore)){
+			//Makes sure to delete item if for some reason player gets the Item out of the Armor Slot
+			event.getItemDrop().setItemStack(null);
 			event.setCancelled(true);
 			event.getPlayer().closeInventory();
 			event.getPlayer().sendMessage(ChatColor.RED + "✕" +  ChatColor.GOLD +" You Are Not Allowed to drop Wardrobe Items");
