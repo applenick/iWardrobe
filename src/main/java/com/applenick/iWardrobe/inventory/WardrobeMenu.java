@@ -6,6 +6,7 @@ import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
 import net.njay.annotation.NestedMenu;
+import net.njay.annotation.PreProcessor;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -106,6 +107,12 @@ public class WardrobeMenu extends Menu {
 	public void resetWardrobe(WardrobePlayer player){
 		player.setActiveMenu(new ChoiceMenu(manager , null));
 		SoundUtil.click(player.getBukkit());
+	}
+	
+	
+	@PreProcessor
+	public void process(Inventory inv){
+	  
 	}
 		
 }
