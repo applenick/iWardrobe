@@ -321,6 +321,51 @@ public class FunHelmets extends Menu {
 		player.getBukkit().closeInventory();
 	}
 	
+	@MenuItem(slot = 27 , 
+			item = @ItemStackAnnotation(
+					material = Material.CACTUS,
+					name = "§aCactus Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void cactusHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.CACTUS, ChatColor.GREEN + "Cactus Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 28 , 
+			item = @ItemStackAnnotation(
+					material = Material.ENDER_PORTAL_FRAME,
+					name = "§5Ender Portal Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void enderPortal(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENDER_PORTAL_FRAME, ChatColor.DARK_PURPLE + "Ender Portal Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 29 , 
+			item = @ItemStackAnnotation(
+					material = Material.ENCHANTMENT_TABLE,
+					name = "§6Enchantment Table Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void enchantTable(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENCHANTMENT_TABLE, ChatColor.GOLD + "Enchantment Table Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	@MenuItem(slot = 30 , 
+			item = @ItemStackAnnotation(
+					material = Material.ENDER_STONE,
+					name = "§eEndStone Hat" ,
+					lore = "§6Super Fun")
+			 )
+	public void endStoneHat(WardrobePlayer player){
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.ENDER_STONE, ChatColor.YELLOW + "End Stone Hat", iWardrobe.wardrobe_lore));
+		player.getBukkit().closeInventory();
+	}
+	
+	
 	
 
 
