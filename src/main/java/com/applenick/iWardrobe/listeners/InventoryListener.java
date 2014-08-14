@@ -75,7 +75,17 @@ public class InventoryListener implements Listener {
 		
 		ItemStack[] armor = p.getInventory().getArmorContents();
 		
-		if(armor[0].getItemMeta().hasLore() || armor[1].getItemMeta().hasLore() || armor[2].getItemMeta().hasLore() || armor[3].getItemMeta().hasLore()){
+		boolean save = false;
+		
+		for(ItemStack item : armor){
+			if(item.hasItemMeta()){
+			save = true;
+			}
+		}
+		
+		if(save != true){
+			return;
+		}else {
 			death_invs.put(p.getName(), armor);
 			event.getDrops().clear();
 		}
