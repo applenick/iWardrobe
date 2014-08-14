@@ -35,7 +35,7 @@ public class FunHelmets extends Menu {
 					lore = "§6Tons Of Boom Boom Fun")
 			 )
 	public void diamondHelmet(WardrobePlayer player){
-		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.TNT, ChatColor.RED + "TNT Hat", iWardrobe.wardrobe_lore);
+		player.getBukkit().getInventory().setHelmet(ItemUtils.getLoreItem(Material.TNT, ChatColor.RED + "TNT Hat", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 	}
 	
