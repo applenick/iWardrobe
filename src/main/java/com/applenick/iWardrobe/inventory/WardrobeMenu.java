@@ -6,7 +6,6 @@ import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
 import net.njay.annotation.NestedMenu;
-import net.njay.annotation.PreProcessor;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
@@ -26,23 +25,23 @@ import com.applenick.iWardrobe.sounds.SoundUtil;
 		name = "§5§lWardrobe"
 		)
 @NestedMenu(
-	    {
-	        HatMenu.class,
-	        ChestPlateMenu.class,
-	        PantsMenu.class,
-	        BootsMenu.class,
-	        ArmorHelmets.class,
-	        FunHelmets.class,
-	        ChoiceMenu.class
-	    }
-)
+		{
+			HatMenu.class,
+			ChestPlateMenu.class,
+			PantsMenu.class,
+			BootsMenu.class,
+			ArmorHelmets.class,
+			FunHelmets.class,
+			ChoiceMenu.class
+		}
+		)
 public class WardrobeMenu extends Menu {
-
+	
 	public WardrobeMenu(MenuManager manager, Inventory inv) {
 		super(manager, inv);
+		
 	}
-	
-	
+
 	@MenuItem(
 			slot = 4,
 			item = @ItemStackAnnotation(
@@ -51,11 +50,11 @@ public class WardrobeMenu extends Menu {
 					lore = "§6Select your §aHat"
 					)
 			)
-	
+
 	public void openHatMenu(WardrobePlayer player){
 		player.setActiveMenu(new HatMenu(manager , null));
 	}
-	
+
 	@MenuItem(
 			slot = 13,
 			item = @ItemStackAnnotation(
@@ -68,7 +67,7 @@ public class WardrobeMenu extends Menu {
 		player.setActiveMenu(new ChestPlateMenu(manager , null));
 		SoundUtil.click(player.getBukkit());
 	}
-	
+
 	@MenuItem(
 			slot = 22,
 			item = @ItemStackAnnotation(
@@ -81,7 +80,7 @@ public class WardrobeMenu extends Menu {
 		player.setActiveMenu(new PantsMenu(manager , null));
 		SoundUtil.click(player.getBukkit());
 	}
-	
+
 	@MenuItem(
 			slot = 31,
 			item = @ItemStackAnnotation(
@@ -94,8 +93,8 @@ public class WardrobeMenu extends Menu {
 		player.setActiveMenu(new BootsMenu(manager , null));
 		SoundUtil.click(player.getBukkit());
 	}
-	
-	
+
+
 	@MenuItem(
 			slot = 6,
 			item = @ItemStackAnnotation(
@@ -106,13 +105,8 @@ public class WardrobeMenu extends Menu {
 			)
 	public void resetWardrobe(WardrobePlayer player){
 		player.setActiveMenu(new ChoiceMenu(manager , null));
-		SoundUtil.click(player.getBukkit());
+		SoundUtil.click(player.getBukkit());		
 	}
-	
-	
-	@PreProcessor
-	public void process(Inventory inv){
-	  
-	}
-		
+
+
 }
