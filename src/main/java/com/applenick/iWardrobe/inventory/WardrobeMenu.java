@@ -53,6 +53,7 @@ public class WardrobeMenu extends Menu {
 
 	public void openHatMenu(WardrobePlayer player){
 		player.setActiveMenu(new HatMenu(manager , null));
+		SoundUtil.click(player.getBukkit());
 	}
 
 	@MenuItem(

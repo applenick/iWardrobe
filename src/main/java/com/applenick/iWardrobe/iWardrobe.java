@@ -38,7 +38,6 @@ public class iWardrobe extends JavaPlugin {
 		setupMenuGUI();
 		setupCommands();
 		
-		this.registerListener(new PlayerLogins());
 		this.registerListener(new InventoryListener());
 	}
 

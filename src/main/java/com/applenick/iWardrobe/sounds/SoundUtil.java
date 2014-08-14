@@ -7,7 +7,7 @@ public class SoundUtil {
 	
 	
 	public static void click(Player player){
-		player.playSound(player.getLocation(), Sound.ITEM_PICKUP, 4, 4);
+		player.playSound(player.getLocation(), Sound.NOTE_BASS_GUITAR, 4, 4);
 	}
 
 }
