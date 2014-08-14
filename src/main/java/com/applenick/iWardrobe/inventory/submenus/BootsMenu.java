@@ -6,13 +6,16 @@ import net.njay.annotation.ItemStackAnnotation;
 import net.njay.annotation.MenuInventory;
 import net.njay.annotation.MenuItem;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.applenick.iWardrobe.WardrobePlayer;
+import com.applenick.iWardrobe.iWardrobe;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.sounds.SoundUtil;
+import com.applenick.iWardrobe.utils.ItemUtils;
 
 
 @MenuInventory(slots = 9 ,
@@ -32,7 +35,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Top of the line")
 			)
 	public void diamondBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
+		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.DIAMOND_BOOTS, ChatColor.AQUA + "Diamond Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -44,7 +47,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the stylish one")
 			)
 	public void goldenBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setBoots(new ItemStack(Material.GOLD_BOOTS));
+		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.GOLD_BOOTS, ChatColor.YELLOW + "Gold Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -56,7 +59,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Strong yet simple")
 			)
 	public void ironBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
+		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.IRON_BOOTS, ChatColor.GRAY + "Iron Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -68,7 +71,7 @@ public class BootsMenu extends Menu {
 					lore = "§6Hidden beauty")
 			)
 	public void chainmailBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
+		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.CHAINMAIL_BOOTS, ChatColor.RED + "Chainmail Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
@@ -80,7 +83,7 @@ public class BootsMenu extends Menu {
 					lore = "§6For the average ones")
 			)
 	public void leatherBoots(WardrobePlayer player){
-		player.getBukkit().getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
+		player.getBukkit().getInventory().setLeggings(ItemUtils.getLoreItem(Material.LEATHER_BOOTS, ChatColor.LIGHT_PURPLE + "Leather Boots", iWardrobe.wardrobe_lore));
 		player.getBukkit().closeInventory();
 		SoundUtil.click(player.getBukkit());
 	}
