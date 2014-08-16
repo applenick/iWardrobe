@@ -13,6 +13,7 @@ import org.bukkit.inventory.Inventory;
 import com.applenick.iWardrobe.WardrobePlayer;
 import com.applenick.iWardrobe.inventory.WardrobeMenu;
 import com.applenick.iWardrobe.inventory.submenus.hats.ArmorHelmets;
+import com.applenick.iWardrobe.inventory.submenus.hats.ColorfulHelmets;
 import com.applenick.iWardrobe.inventory.submenus.hats.FunHelmets;
 import com.applenick.iWardrobe.sounds.SoundUtil;
 
@@ -65,7 +66,7 @@ public class HatMenu extends Menu {
 	
 			)
 	public void openColorfulHats(WardrobePlayer player){
-		player.setActiveMenu(new FunHelmets(manager, null));
+		player.setActiveMenu(new ColorfulHelmets(manager, null));
 		SoundUtil.click(player.getBukkit());
 	}
 

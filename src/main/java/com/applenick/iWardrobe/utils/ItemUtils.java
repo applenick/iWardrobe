@@ -24,4 +24,14 @@ public class ItemUtils {
 		item.setItemMeta(meta);
 		return item;
 	}
+	
+	public static ItemStack createWoolItem(Material material, String name, String lore , byte color) {
+        ItemStack item = new ItemStack(material, 1, (byte) color);
+        ItemMeta meta = item.getItemMeta();
+ 
+        meta.setDisplayName(name);
+ 
+        item.setItemMeta(meta);   
+        return item;
+    }
 }
