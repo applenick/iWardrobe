@@ -8,7 +8,6 @@ import net.njay.annotation.MenuItem;
 import net.njay.annotation.PreProcessor;
 
 import org.bukkit.ChatColor;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -30,8 +29,8 @@ public class ColorfulHelmets extends Menu {
 	
 	@PreProcessor
 	public void preHelmet(Inventory inv){
-	  ItemStack redWool = ItemUtils.createWoolItem(Material.WOOL, ChatColor.RED + "Red Wool", "", DyeColor.RED.getData());
-	  inv.setItem(2, redWool);
+	  ItemStack redWool = new ItemStack(Material.WOOL);
+	  inv.setItem(0, redWool);
 	}
 	
 	
