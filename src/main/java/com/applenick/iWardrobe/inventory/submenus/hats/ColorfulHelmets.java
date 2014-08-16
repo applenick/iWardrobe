@@ -31,7 +31,7 @@ public class ColorfulHelmets extends Menu {
 	@PreProcessor
 	public void preHelmet(Inventory inv){
 	  ItemStack redWool = ItemUtils.createWoolItem(Material.WOOL, ChatColor.RED + "Red Wool", "", DyeColor.RED.getData());
-	  inv.setItem(0, redWool);
+	  inv.setItem(2, redWool);
 	}
 	
 	
