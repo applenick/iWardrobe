@@ -1,7 +1,8 @@
 iWardrobe
 =========
 
-A Minecraft Wardrobe Manager Plugin - Created for PvPItUp
+#####Update - 9/8/14 
+Wardrobe is now Depricated, please use caution when downloading as the plugin will no longer recieve support
 
 ##Commands
 
